@@ -79,6 +79,7 @@ definitions:
         type: string
       updatedAt:
         type: string
+    type: object
 info:
   contact: {}
 paths:
@@ -143,19 +144,4 @@ paths:
             $ref: '#/definitions/dto.NewOrderResponseDto'
       tags:
         - orders
-    delete:
-      description: Delete Order Data By Id
-      operationId: delete-order
-      parameters:
-        - name: orderId
-          in: path
-          description: order's id
-          required: true
-          type: integer
-      responses:
-        '204':
-          description: No content
-        '404':
-          description: Order not found
-      tags:
-        - orders
+swagger: '2.0'
